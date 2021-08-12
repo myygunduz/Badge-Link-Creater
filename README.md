@@ -1,6 +1,8 @@
-# Badge-Link-Creater
+# Badge-Link-Creater 'For more beautiful profiles.'
 
-
+<p align="center">
+  <img src='https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/Badges-Link-Creater.gif' />
+</p>
 
 
 # Ready Badges
