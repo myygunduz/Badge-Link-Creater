@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)
 ![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white) 
-![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0&labelColor=212121&color=ff422e)
+![Version](https://img.shields.io/static/v1?label=Version&message=1.0.0&labelColor=212121&color=ff422e&style=for-the-badge)
 
 
 <p align="center">
