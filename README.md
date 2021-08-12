@@ -41,3 +41,7 @@ Generates badges that show stats for a github user of your choice.
 
 ## Note 
 Click <a href = "https://github.com/anuraghazra/github-readme-stats">here</a> for more detailed information
+
+
+# Note
+pyqt5Custom is used, <a href="https://github.com/kadir014/pyqt5-custom-widgets">click</a> for detailed information
