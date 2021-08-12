@@ -3,7 +3,7 @@
 #    https://github.com/myygunduz/Badge-Link-Creater    #
 
 from PyQt5.QtGui import QIntValidator
-from PyQt5.QtWidgets import  QLineEdit, QVBoxLayout, QWidget, QPushButton
+from PyQt5.QtWidgets import  QLineEdit, QVBoxLayout, QWidget, QPushButton, QComboBox
 from PyQt5.QtCore import  Qt
 from Modules.shareLink import  shareLink
 from pyqt5Custom import ImageBox, ToggleSwitch
@@ -11,6 +11,13 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 
 class CustomBadges(QWidget):
     settings={}
+    typeDict ={
+        'Plastic':'plastic',
+        'Flat':'flat',
+        'Flat Square':'flat-square',
+        'For The Badge':'for-the-badge',
+        'Social':'social'
+    }
     def __init__(self):
         super().__init__()
 
@@ -25,6 +32,10 @@ class CustomBadges(QWidget):
         self.message = QLineEdit()
         self.message.setPlaceholderText('Message')
 
+        self.typeBox = QComboBox()
+        self.typeBox.addItems(self.typeDict.keys())
+
+
         self.moreSettingsButton = ToggleSwitch('Show More Settings')
         self.moreSettingsButton.toggled.connect(self.signalToggleSwitch)
 
@@ -34,6 +45,7 @@ class CustomBadges(QWidget):
 
         self.mainLayout.addWidget(self.title)
         self.mainLayout.addWidget(self.message)
+        self.mainLayout.addWidget(self.typeBox)
         self.mainLayout.addWidget(self.moreSettingsButton)
         self.mainLayout.addWidget(self.createButton)
 
@@ -47,9 +59,13 @@ class CustomBadges(QWidget):
     
 
     def createBadge(self):
+
+        Type = self.typeDict[self.typeBox.currentText()]
+
         self.baseUrl = "https://img.shields.io/static/v1"
         self.baseUrl+= f"?label={self.title.text()}"
         self.baseUrl+= f"&message={self.message.text()}"
+        self.baseUrl+= f"&style={Type}"
         for i in self.settings:
             if len(self.settings[i]) !=0: 
                 self.baseUrl +=f"&{self.settings[i][0]}={self.settings[i][-1]}"
