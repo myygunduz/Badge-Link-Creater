@@ -74,5 +74,6 @@ class ShareLink(QWidget):
         </td>
     </tr>
 </table>"""
+        
         self.copyLayout.lineEdit.setText(self.htmlCode)
         self.copyLayout.lineEdit.setCursorPosition(0)

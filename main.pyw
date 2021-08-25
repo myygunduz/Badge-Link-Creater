@@ -11,7 +11,7 @@ class main(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setMinimumSize(800,600)
+        self.setMinimumSize(600,600)
 
 
         self.mainWidget = QTabWidget()
