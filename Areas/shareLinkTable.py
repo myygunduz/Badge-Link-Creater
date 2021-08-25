@@ -34,51 +34,45 @@ class ShareLink(QWidget):
 
         self.mainLayout.addLayout(self.copyLayout)
     def preview(self):
-        try: self.table.deleteLater()
-        except: pass
         self.htmlCode = f"""
 <table align='center'>
     <tr>
         <td>
-            <a href="https://web.facebook.com/sharer.php?t={self.message.text().replace(" ","%20")}&u={self.link.text()}&_rdc=1&_rdr" onclick="return false;">
+            <a href="https://web.facebook.com/sharer.php?t={self.message.text().replace(" ","%20")}&u={self.link.text()}&_rdc=1&_rdr" >
                 <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/facebook.svg" height="48" width="48" alt="Facebook"/>
             </a>
         </td>
         <td>
-            <a href="https://www.facebook.com/dialog/send?link={self.link.text()}&app_id=291494419107518&redirect_uri={self.link.text()}" onclick="return false;">
+            <a href="https://www.facebook.com/dialog/send?link={self.link.text()}&app_id=291494419107518&redirect_uri={self.link.text()}" >
                 <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/messenger.svg" height="48" width="48" alt="Facebook Messenger"/>
             </a>
         </td>
         <td>
-            <a href="https://twitter.com/intent/tweet?text={self.message.text().replace(" ","%20")}&url={self.link.text()}" onclick="return false;">
+            <a href="https://twitter.com/intent/tweet?text={self.message.text().replace(" ","%20")}&url={self.link.text()}" >
                 <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/twitter.svg" height="48" width="48" alt="Twitter"/>
             </a>
         </td>
         <td>
-            <a href="https://web.whatsapp.com/send?text={self.message.text().replace(" ","%20")} {self.link.text()}" onclick="return false;">
+            <a href="https://web.whatsapp.com/send?text={self.message.text().replace(" ","%20")} {self.link.text()}" >
                 <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/whatsapp.svg" height="48" width="48" alt="WhatsApp"/>
             </a>
         </td>
         <td>
-            <a href="https://t.me/share/url?url={self.link.text()}&text=G{self.message.text().replace(" ","%20")}" onclick="return false;">
+            <a href="https://t.me/share/url?url={self.link.text()}&text=G{self.message.text().replace(" ","%20")}" >
                 <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/telegram.svg" height="48" width="48" alt="Telegram"/>
             </a>
         </td>
         <td>
-            <a href="https://www.linkedin.com/shareArticle?title={self.message.text().replace(" ","%20")}&url={self.link.text()}" onclick="return false;">
+            <a href="https://www.linkedin.com/shareArticle?title={self.message.text().replace(" ","%20")}&url={self.link.text()}" >
                 <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/linkedin.svg" height="48" width="48" alt="LinkedIn"/>
             </a>
         </td>
         <td>
-            <a href="https://www.reddit.com/submit?title={self.message.text().replace(" ","%20")}&url={self.link.text()}" onclick="return false;">
+            <a href="https://www.reddit.com/submit?title={self.message.text().replace(" ","%20")}&url={self.link.text()}" >
                 <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/reddit.svg" height="48" width="48" alt="Reddit"/>
             </a>
         </td>
     </tr>
 </table>"""
-        self.table = QWebEngineView()
-        self.table.setHtml(self.htmlCode.strip())
-        
-        self.mainLayout.addWidget(self.table)
-        self.copyLayout.lineEdit.setText(self.htmlCode.replace('onclick="return false;"',""))
+        self.copyLayout.lineEdit.setText(self.htmlCode)
         self.copyLayout.lineEdit.setCursorPosition(0)
