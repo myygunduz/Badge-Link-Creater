@@ -1,6 +1,9 @@
+#                   Badge Link Creater                  #
+#                       myygunduz                       #
+#    https://github.com/myygunduz/Badge-Link-Creater    #
+
 from PyQt5.QtWidgets import   QLineEdit, QVBoxLayout, QWidget, QPushButton
 from PyQt5.QtCore import   Qt
-from Modules.jsonhelper import  readJ
 from Modules.shareLink import  shareLink
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 
@@ -38,37 +41,37 @@ class ShareLink(QWidget):
     <tr>
         <td>
             <a href="https://web.facebook.com/sharer.php?t={self.message.text().replace(" ","%20")}&u={self.link.text()}&_rdc=1&_rdr" onclick="return false;">
-                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/facebook.png" height="48" width="48" alt="Facebook"/>
+                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/facebook.svg" height="48" width="48" alt="Facebook"/>
             </a>
         </td>
         <td>
             <a href="https://www.facebook.com/dialog/send?link={self.link.text()}&app_id=291494419107518&redirect_uri={self.link.text()}" onclick="return false;">
-                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/messenger.png" height="48" width="48" alt="Facebook Messenger"/>
+                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/messenger.svg" height="48" width="48" alt="Facebook Messenger"/>
             </a>
         </td>
         <td>
             <a href="https://twitter.com/intent/tweet?text={self.message.text().replace(" ","%20")}&url={self.link.text()}" onclick="return false;">
-                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/twitter.png" height="48" width="48" alt="Twitter"/>
+                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/twitter.svg" height="48" width="48" alt="Twitter"/>
             </a>
         </td>
         <td>
             <a href="https://web.whatsapp.com/send?text={self.message.text().replace(" ","%20")} {self.link.text()}" onclick="return false;">
-                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/whatsapp.png" height="48" width="48" alt="WhatsApp"/>
+                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/whatsapp.svg" height="48" width="48" alt="WhatsApp"/>
             </a>
         </td>
         <td>
             <a href="https://t.me/share/url?url={self.link.text()}&text=G{self.message.text().replace(" ","%20")}" onclick="return false;">
-                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/telegram.png" height="48" width="48" alt="Telegram"/>
+                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/telegram.svg" height="48" width="48" alt="Telegram"/>
             </a>
         </td>
         <td>
             <a href="https://www.linkedin.com/shareArticle?title={self.message.text().replace(" ","%20")}&url={self.link.text()}" onclick="return false;">
-                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/linkedin.png" height="48" width="48" alt="LinkedIn"/>
+                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/linkedin.svg" height="48" width="48" alt="LinkedIn"/>
             </a>
         </td>
         <td>
             <a href="https://www.reddit.com/submit?title={self.message.text().replace(" ","%20")}&url={self.link.text()}" onclick="return false;">
-                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/reddit.png" height="48" width="48" alt="Reddit"/>
+                <img src="https://github.com/myygunduz/Badge-Link-Creater/blob/main/Assets/icons/reddit.svg" height="48" width="48" alt="Reddit"/>
             </a>
         </td>
     </tr>

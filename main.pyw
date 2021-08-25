@@ -5,10 +5,7 @@
 
 
 from PyQt5.QtWidgets import QScrollArea, QTabWidget, QVBoxLayout, QWidget, QApplication
-from Areas.readyBadges import ReadyBadges
-from Areas.customBadges import CustomBadges
-from Areas.statsBadges import StatsBadges
-from Areas.shareLinkTable import ShareLink
+from Areas import ReadyBadges, CustomBadges, StatsBadges, ShareLink
 
 class main(QWidget):
     def __init__(self):
