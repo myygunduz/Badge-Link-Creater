@@ -8,12 +8,13 @@ from PyQt5.QtWidgets import QScrollArea, QTabWidget, QVBoxLayout, QWidget, QAppl
 from Areas.readyBadges import ReadyBadges
 from Areas.customBadges import CustomBadges
 from Areas.statsBadges import StatsBadges
+from Areas.shareLinkTable import ShareLink
 
 class main(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setMinimumSize(600,600)
+        self.setMinimumSize(800,600)
 
 
         self.mainWidget = QTabWidget()
@@ -38,9 +39,12 @@ class main(QWidget):
         widgetThree.setContentsMargins(0,0,0,0)
         widgetThree.setWidgetResizable(True)
 
+        areaFour = ShareLink()
+
         self.mainWidget.addTab(areaOne,'Ready Badges')
         self.mainWidget.addTab(widgetTwo,'Custom Badges')
         self.mainWidget.addTab(widgetThree,'Github Stats Badges')
+        self.mainWidget.addTab(areaFour,'Share Table')
         mainLayout.addWidget(self.mainWidget)
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ from PyQt5.QtGui import QIntValidator
 from PyQt5.QtWidgets import  QLineEdit, QVBoxLayout, QWidget, QPushButton, QComboBox
 from PyQt5.QtCore import  Qt
 from Modules.shareLink import  shareLink
-from pyqt5Custom import ImageBox, ToggleSwitch
+from pyqt5Custom import ToggleSwitch
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 
 class CustomBadges(QWidget):
